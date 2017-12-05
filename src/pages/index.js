@@ -1,13 +1,15 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { FullPage, Slide } from 'react-full-page';
 
 const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+  <FullPage controls controlsProps={{className: 'class-name'}}>
+    <Slide>
+      <h1>1 Inner slide content</h1>
+    </Slide>
+    <Slide>
+      <h1>2 Another slide content</h1>
+    </Slide>
+  </FullPage>
 )
 
 export default IndexPage
