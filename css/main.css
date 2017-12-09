@@ -1,7 +1,9 @@
 @import url('normalize.css');
 
+@import url('./sections/sections-common.css');
 @import url('./sections/about.css');
 @import url('./full-page.css');
+@import url('./slide-navigation.css');
 
 /* Base styles */
 html {
@@ -14,7 +16,8 @@ body {
 	height: 100%;
 	background: #fff;
 	color: #000;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
 	font-size: 16px;
 	line-height: 1.2;
 	-webkit-font-smoothing: antialiased;
@@ -22,7 +25,7 @@ body {
 	overflow-y: visible;
 }
 
-.slide {
+/* .section {
 	height: 100%;
 	background-color: red;
-}
+} */

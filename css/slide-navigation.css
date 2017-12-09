@@ -1,0 +1,16 @@
+.slide__navigation {
+  position: fixed;
+  width: 24px;
+  height: 44px;
+  left: 16px;
+  bottom: 10px;
+  z-index: 2;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+}
+
+.arrow-up, .arrow-down {
+  cursor: pointer;
+}

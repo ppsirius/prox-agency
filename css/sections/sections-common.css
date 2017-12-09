@@ -1,0 +1,26 @@
+.section {
+  height: 100%;
+}
+
+.section__container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__main {
+
+}
+
+.section__main__image {
+  display: block;
+  width: 250px;
+  margin-bottom: 30%;
+}
+
+.section__main__headline {
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+}
