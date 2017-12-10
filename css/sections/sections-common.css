@@ -17,6 +17,7 @@
   display: block;
   width: 250px;
   margin-bottom: 30%;
+  user-select: none;
 }
 
 .section__main__headline {
