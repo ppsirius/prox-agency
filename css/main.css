@@ -2,8 +2,9 @@
 
 @import url('./sections/sections-common.css');
 @import url('./sections/about.css');
-@import url('./full-page.css');
-@import url('./slide-navigation.css');
+@import url('./layout/full-page.css');
+@import url('./layout/slide-navigation.css');
+@import url('./layout/menu.css');
 
 /* Base styles */
 html {
