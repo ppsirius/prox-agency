@@ -1,5 +1,5 @@
-
-import fullPage from './lib/fullPage.lib';
+import $ from 'jquery';
+import fullpage from "fullpage.js"
 class FullPage {
   constructor() {
     this.currentActiveSlide = 1;
@@ -7,7 +7,7 @@ class FullPage {
   }
 
   init() {
-    fullPage.initialize('.app', {
+    $('.app').fullpage({
       onLeave: (index, slideIndex) => {
         this.currentActiveSlide = slideIndex;
       }
@@ -26,13 +26,13 @@ class FullPage {
 
   animateToNextSlide() {
     if(this.currentActiveSlide < this.slideElements) {
-      fullPage.moveTo(this.currentActiveSlide + 1)
+      $.fn.fullpage.moveTo(this.currentActiveSlide + 1)
     }
   }
 
   animateToPrevSlide() {
     if(this.currentActiveSlide > 1) {
-      fullPage.moveTo(this.currentActiveSlide - 1)
+      $.fn.fullpage.moveTo(this.currentActiveSlide - 1)
     }
   }
 

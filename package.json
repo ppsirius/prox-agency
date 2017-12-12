@@ -4,7 +4,10 @@
   "author": "piotrek@jakbyco.com",
   "license": "MIT",
   "dependencies": {
+    "animejs": "^2.2.0",
     "babel-preset-env": "^1.6.1",
+    "fullpage.js": "^2.9.5",
+    "jquery": "^3.2.1",
     "normalize.css": "^7.0.0"
   }
 }

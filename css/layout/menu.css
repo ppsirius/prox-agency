@@ -1,4 +1,30 @@
+.menu__button {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 300;
+}
+
 .menu {
   position: fixed;
+  z-index: 200;
+  width: 100vw;
+  height: 100vh;
+  background: rebeccapurple;
+}
 
+.circle_svg {
+  position: absolute;
+  display: block;
+  max-width: 200px;
+  right: 0;
+}
+
+.menu {
+  clip-path: url(#menu_clip_path);
+  -webkit-clip-path: url(#menu_clip_path);
+}
+
+.menu_svg_container {
+  position: relative;
 }
