@@ -1,6 +1,7 @@
-@import url('normalize.css');
+//@import url('normalize.css');
+@import "~normalize.css/normalize.css";
+@import url('~fullpage.js/dist/jquery.fullpage.css');
 
-@import url('../node_modules/fullpage.js/dist/jquery.fullpage.css');
 @import url('./sections/sections-common.css');
 @import url('./sections/about.css');
 @import url('./layout/slide-navigation.css');
