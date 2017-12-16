@@ -1,29 +1,48 @@
-import $ from 'jquery';
-import anime from 'animejs'
+import $ from "jquery";
+import { TweenMax } from "gsap";
+import fullpage from "fullpage.js";
 
 class Menu {
-  constructort() {
+  constructor() {
     this.isOpen = false;
+    this.menuClipPath = document.querySelector("#menu_clip_path circle");
   }
 
   init() {
-    this.marginRight = 16;
-    this.marginTop = 16;
+    this.setMenuSvgCirclePosition();
+    this.scrollToSlide();
+
+    document
+      .querySelector(".menu__button")
+      .addEventListener("click", this.tooggleMenu.bind(this));
+  }
+
+  setMenuSvgCirclePosition() {
+    this.marginRight = 16 + 28 / 2; // center to svg icon
+    this.marginTop = 16 + 22 / 2;
     this.positionX = window.innerWidth - this.marginRight;
+    $("#menu_clip_path circle").attr("cx", this.positionX);
+    $("#menu_clip_path circle").attr("cy", this.marginTop);
+  }
 
-    $('#menu_clip_path circle').attr('cx', this.positionX);
-    $('#menu_clip_path circle').attr('cy', this.marginTop);
+  scrollToSlide() {
+    let menu = document.querySelector(".menu__list");
+    menu.addEventListener("click", scrollTo.bind(this));
 
-    document.querySelector('.menu__button').addEventListener('click', this.tooggleMenu);
+    function scrollTo(e) {
+      if (e.target !== e.currentTarget) {
+        $.fn.fullpage.silentMoveTo(e.target.dataset.id);
+        this.tooggleMenu();
+      }
+    }
   }
 
   tooggleMenu() {
-    if(this.isOpen) {
-      $('#menu_clip_path circle').attr('r', '0');
+    if (this.isOpen) {
+      TweenMax.to(this.menuClipPath, 0.5, { attr: { r: 0 } });
     } else {
-      $('#menu_clip_path circle').attr('r', '2000');
+      TweenMax.to(this.menuClipPath, 0.5, { attr: { r: 2000 } });
     }
-
     this.isOpen = !this.isOpen;
   }
 }
