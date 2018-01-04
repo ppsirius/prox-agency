@@ -1,28 +1,14 @@
-//@import url('normalize.css');
-@import "~normalize.css/normalize.css";
-@import url('~fullpage.js/dist/jquery.fullpage.css');
+// Libs
+@import '~normalize.css/normalize.css';
+@import '~fullpage.js/dist/jquery.fullpage.css';
 
+// Common
+@import './common/variables.scss';
+@import './common/fluid-typo.scss';
+@import './common/base.scss';
+
+// Other
 @import url('./sections/sections-common.css');
 @import url('./sections/about.css');
 @import url('./layout/slide-navigation.css');
 @import url('./layout/menu.css');
-
-/* Base styles */
-html {
-	width: 100%;
-	height: 100%;
-}
-
-body {
-	width: 100%;
-	height: 100%;
-	background: #fff;
-	color: #000;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	font-size: 16px;
-	line-height: 1.2;
-	-webkit-font-smoothing: antialiased;
-	overflow-x: hidden;
-	overflow-y: visible;
-}

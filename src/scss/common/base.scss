@@ -1,0 +1,22 @@
+$min_width: 300px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 22px;
+
+/* Base styles */
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background: $bg-color;
+	color: $primary-color;
+	font-family: $font-family;
+	font-weight: $font-light;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+	line-height: $line-height;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+	overflow-y: visible;
+}

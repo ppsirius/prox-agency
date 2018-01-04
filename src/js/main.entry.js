@@ -1,6 +1,5 @@
 import '../scss/main.scss';
 
-
 import FullPage from './fullPage';
 import Menu from './menu';
 
