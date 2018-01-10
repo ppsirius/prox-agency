@@ -16,9 +16,12 @@
     "server-prod": "cross-env NODE_ENV=production webpack-dev-server -p --open"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.37",
+    "@babel/preset-env": "^7.0.0-beta.37",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
+    "babel-plugin-lodash": "^3.3.2",
     "babel-preset-env": "^1.6.0",
     "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.5",
