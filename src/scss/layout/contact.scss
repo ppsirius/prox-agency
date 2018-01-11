@@ -1,0 +1,73 @@
+.contact__button {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  width: 38px;
+  height: 32px;
+  z-index: $z-index-contact-button;
+  cursor: pointer;
+}
+
+.contact {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: $bg-color;
+  z-index: $z-index-contact;
+  pointer-events: none;
+
+  &.is-open {
+    pointer-events: all;
+  }
+}
+
+.contact__circle__bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  .contact__circle__bg__svg {
+    transform-origin: 50% 50%;
+  }
+}
+
+.contact__content {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  color: $bg-color;
+  font-size: 32px;
+
+  .contact__wrapper {
+    width: 100%;
+    height: 100%;
+
+    .contact__mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      text-align: center;
+
+      .contact__mobile__container {
+
+        .contact__mobile__header {
+          display: block;
+          color: $light-blue;
+          margin-bottom: 20px;
+        }
+
+        .contact__mobile__info {
+          font-weight: $font-bold;
+        }
+
+        a {
+          color: $bg-color;
+          text-decoration: none;
+        }
+      }
+    }
+
+  }
+}
