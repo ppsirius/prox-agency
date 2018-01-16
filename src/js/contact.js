@@ -8,6 +8,7 @@ class Contact {
     this.isOpen = false;
     this.isAnimating = false;
     this.contactClipPath = document.querySelector(".contact__circle__bg__svg circle");
+    this.contactElemnents = document.querySelectorAll(".contact__mobile__container");
   }
 
   init() {
@@ -36,7 +37,7 @@ class Contact {
     if (!this.isAnimating) {
       this.isAnimating = true;
       if (this.isOpen) {
-        TweenMax.to(this.menuElemnents, 0.2, {
+        TweenMax.to(this.contactElemnents, 0.2, {
           opacity: 0,
           y: -10,
           onComplete: () =>
@@ -44,23 +45,25 @@ class Contact {
               attr: { r: 0 },
               onComplete: () => {
                 document.querySelector('.contact').classList.remove('is-open')
+                document.querySelector('.contact__button').classList.remove('is-open')
                 this.isAnimating = false
               }
             })
         });
       } else {
-        document.querySelector('.contact').classList.add('is-open')
+        document.querySelector('.contact').classList.add('is-open');
+        document.querySelector('.contact__button').classList.add('is-open')
         TweenMax.to(this.contactClipPath, 0.3, {
           attr: { r: this.circleRadius },
           onComplete: () => {
             TweenMax.staggerTo(
-              this.menuElemnents,
+              this.contactElemnents,
               0.5,
               {
                 opacity: 1,
                 y: 0
               },
-              0.05,
+              0.2,
               () => this.isAnimating = false
             );
           }

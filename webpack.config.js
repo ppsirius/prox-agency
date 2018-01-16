@@ -4,7 +4,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyPlugin = require('copy-webpack-plugin');
 
-
 let config = {
   production: false,
   distPath: path.resolve(__dirname, './dist'),
@@ -14,6 +13,7 @@ let config = {
   host: '0.0.0.0',
   port: '8888'
 };
+
 const plugins = [
   new ExtractTextPlugin('css/style.css'),
   new CopyPlugin([
@@ -62,12 +62,6 @@ module.exports = {
               presets: [['env']]
             }
           }
-        //   {
-        //     loader: 'eslint-loader',
-        //     options: {
-        //       configFile: 'config/eslint.js'
-        //     }
-        //   }
         ]
       },
       {
