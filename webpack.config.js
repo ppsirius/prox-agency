@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const CopyPlugin = require('copy-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 let config = {
   production: false,
@@ -35,6 +36,10 @@ if (process.env.NODE_ENV === 'production') {
     sourceMaps: 'source-map'
   });
 };
+
+if (typeof process.env.ANALYZE_BUNDLE !== 'undefined') {
+  plugins.push(new BundleAnalyzerPlugin());
+}
 
 module.exports = {
   entry: {

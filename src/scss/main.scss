@@ -8,9 +8,10 @@
 @import './common/base.scss';
 
 // Other
-@import './sections/sections-common.scss';
-@import './sections/about.scss';
+@import './layout/sections-common.scss';
 @import './layout/slide-navigation.scss';
 @import './layout/menu.scss';
 @import './layout/contact.scss';
 @import './layout/more-button.scss';
+@import './sections/about.scss';
+@import './layout/more.scss';

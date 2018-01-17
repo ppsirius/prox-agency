@@ -22,8 +22,8 @@ class More {
   }
 
   setMenuSvgCirclePosition() {
-    this.marginRight = 16 + 28 / 2; // center to svg icon
-    this.marginBottom = 16 + 22 / 2;
+    this.marginRight = 16 + 32 / 2; // center to svg icon
+    this.marginBottom = 26 + 32 / 2;
     this.positionX = window.innerWidth - this.marginRight;
     this.positionY = window.innerHeight - this.marginBottom;
 
@@ -67,17 +67,13 @@ class More {
             })
         });
       } else {
-        TweenMax.to(this.moreClipPath, 0.3, {
-          attr: { r: this.circleRadius }
-        });
         TweenMax.to(this.mainSection, 0.3, {
           opacity: 0,
           onComplete: () => {
             TweenMax.set(this.mainSection, {
               css: {
                 display: "none",
-                pointerEvents: "none",
-                transform: "translateY(-10px)"
+                pointerEvents: "none"
               }
             });
             TweenMax.set(this.moreSection, {
@@ -97,6 +93,11 @@ class More {
             this.isAnimating = false;
           }
         });
+        TweenMax.to(this.moreClipPath, 0.3, {
+          attr: { r: this.circleRadius },
+          delay: 0.2
+        });
+
       }
       this.isOpen = !this.isOpen;
     }

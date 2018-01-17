@@ -11,7 +11,7 @@
 }
 
 .section__main {
-
+  z-index: $z-index-main-section;
 }
 
 .section__more {
@@ -19,12 +19,13 @@
   opacity: 0;
   pointer-events: none;
   transition: all;
+  z-index: $z-index-more-section;
 }
 
 .section__main__image {
   display: block;
-  width: 250px;
-  margin-bottom: 30%;
+  width: 220px;
+  margin: 0 auto 30% auto;
 }
 
 .section__main__headline {

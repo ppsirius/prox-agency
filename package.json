@@ -12,6 +12,8 @@
     "build": "npm run clear && webpack",
     "build-prod": "npm run clear && cross-env NODE_ENV=production webpack -p",
     "watch": "npm run build -- --watch",
+    "analyze-build-debug": "cross-env ANALYZE_BUNDLE=1 npm run build-debug",
+    "analyze-build-prod": "cross-env ANALYZE_BUNDLE=1 npm run build-prod",
     "server-dev": "webpack-dev-server --open",
     "server-prod": "cross-env NODE_ENV=production webpack-dev-server -p --open"
   },
@@ -32,6 +34,7 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.6",
     "webpack": "^3.5.5",
+    "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
