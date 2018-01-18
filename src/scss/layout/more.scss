@@ -1,5 +1,24 @@
 .section__more {
-  padding: 10%;
+  display: none;
+  height: 100%;
+  padding: 0 10%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all;
+  z-index: $z-index-more-section;
   color: $bg-color;
   text-align: center;
+
+
+  .section__more__mobile__header {
+    font-size: 26px;
+    color: $light-blue;
+    margin-bottom: $gutter-30;
+  }
+
+  .section__more__mobile__subheader {
+    margin: 0 0 $gutter-30 0;
+    font-size: 18px;
+  }
 }
+

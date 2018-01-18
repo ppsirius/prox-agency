@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { TweenMax } from 'gsap';
+import { TweenMax, Power2 } from 'gsap';
 import fullpage from 'fullpage.js';
 import { getCircleRadius, setSvgCirclePosition } from './helpers';
 
@@ -35,6 +35,10 @@ class More {
                   opacity: 1,
                   y: 0
                 });
+                TweenMax.to(this.moreButton, 0.3, {
+                  rotation: 45,
+                  ease: Power2.easeOut
+                });
                 TweenMax.set(this.mainSection, {
                   css: {
                     display: 'block',
@@ -52,6 +56,10 @@ class More {
             })
         });
       } else {
+        TweenMax.to(this.moreButton, 0.3, {
+          rotation: 0,
+          ease: Power2.easeOut
+        });
         TweenMax.to(this.mainSection, 0.3, {
           opacity: 0,
           onComplete: () => {

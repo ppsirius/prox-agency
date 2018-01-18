@@ -23,8 +23,8 @@
 
 .menu__circle__bg {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   .menu__circle__bg__svg {
     transform-origin: 50% 50%;
@@ -57,7 +57,7 @@
   .menu__list__element {
     text-align: center;
     list-style: none;
-    font-size: 32px;
+    font-size: 27px;
     user-select: none;
     cursor: pointer;
     transform: translateY(-10px);

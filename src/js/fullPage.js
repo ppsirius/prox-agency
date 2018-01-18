@@ -8,7 +8,7 @@ class FullPage {
 
   init() {
     $('.app').fullpage({
-      // verticalCentered: false,
+      verticalCentered: false,
       onLeave: (index, slideIndex) => {
         this.currentActiveSlide = slideIndex;
       }

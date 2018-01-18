@@ -14,8 +14,8 @@
 
 .contact {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   color: $bg-color;
   z-index: $z-index-contact;
   pointer-events: none;
@@ -28,8 +28,8 @@
 
 .contact__circle__bg {
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 
   .contact__circle__bg__svg {
     transform-origin: 50% 50%;
@@ -38,10 +38,10 @@
 
 .contact__content {
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   color: $bg-color;
-  font-size: 32px;
+  font-size: 27px;
 
   .contact__wrapper {
     display: flex;

@@ -11,21 +11,16 @@
 }
 
 .section__main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   z-index: $z-index-main-section;
-}
-
-.section__more {
-  display: none;
-  opacity: 0;
-  pointer-events: none;
-  transition: all;
-  z-index: $z-index-more-section;
 }
 
 .section__main__image {
   display: block;
-  width: 220px;
-  margin: 0 auto 30% auto;
+  width: 200px;
+  margin: 0 auto 10% auto;
 }
 
 .section__main__headline {
