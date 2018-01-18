@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import fullpage from "fullpage.js"
+import fullpage from 'fullpage.js'
 class FullPage {
   constructor() {
     this.currentActiveSlide = 1;
@@ -8,6 +8,7 @@ class FullPage {
 
   init() {
     $('.app').fullpage({
+      // verticalCentered: false,
       onLeave: (index, slideIndex) => {
         this.currentActiveSlide = slideIndex;
       }

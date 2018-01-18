@@ -1,38 +1,23 @@
-import $ from "jquery";
-import { TweenMax } from "gsap";
-import fullpage from "fullpage.js";
-import { getCircleRadius } from "./helpers";
+import $ from 'jquery';
+import { TweenMax } from 'gsap';
+import fullpage from 'fullpage.js';
+import { getCircleRadius, setSvgCirclePosition } from './helpers';
 
 class More {
   constructor() {
     this.isOpen = false;
     this.isAnimating = false;
-    this.moreClipPath = document.querySelector(".more__circle__bg__svg circle");
-    this.moreSection = document.querySelectorAll(".section__more");
-    this.mainSection = document.querySelectorAll(".section__main");
+    this.moreClipPath = document.querySelector('.more__circle__bg__svg circle');
+    this.moreSection = document.querySelectorAll('.section__more');
+    this.moreButton = document.querySelector('.more__button');
+    this.mainSection = document.querySelectorAll('.section__main');
   }
 
   init() {
-    this.setMenuSvgCirclePosition();
+    setSvgCirclePosition('.more__button', '.more__circle__bg__svg');
     this.circleRadius = getCircleRadius();
 
-    document
-      .querySelector(".more__button")
-      .addEventListener("click", this.tooggleMenu.bind(this));
-  }
-
-  setMenuSvgCirclePosition() {
-    this.marginRight = 16 + 32 / 2; // center to svg icon
-    this.marginBottom = 26 + 32 / 2;
-    this.positionX = window.innerWidth - this.marginRight;
-    this.positionY = window.innerHeight - this.marginBottom;
-
-    $(".more__circle__bg__svg").attr(
-      "viewBox",
-      `0 0 ${window.innerWidth} ${window.innerHeight}`
-    );
-    $(this.moreClipPath).attr("cx", this.positionX);
-    $(this.moreClipPath).attr("cy", this.positionY);
+    this.moreButton.addEventListener('click', this.tooggleMenu.bind(this));
   }
 
   tooggleMenu() {
@@ -52,14 +37,14 @@ class More {
                 });
                 TweenMax.set(this.mainSection, {
                   css: {
-                    display: "block",
-                    pointerEvents: "all"
+                    display: 'block',
+                    pointerEvents: 'all'
                   }
                 });
                 TweenMax.set(this.moreSection, {
                   css: {
-                    display: "none",
-                    pointerEvents: "none"
+                    display: 'none',
+                    pointerEvents: 'none'
                   }
                 });
                 this.isAnimating = false;
@@ -72,13 +57,13 @@ class More {
           onComplete: () => {
             TweenMax.set(this.mainSection, {
               css: {
-                display: "none",
-                pointerEvents: "none"
+                display: 'none',
+                pointerEvents: 'none'
               }
             });
             TweenMax.set(this.moreSection, {
               css: {
-                display: "block"
+                display: 'block'
               }
             });
             TweenMax.to(this.moreSection, 0.3, {
@@ -87,7 +72,7 @@ class More {
             });
             TweenMax.set(this.moreSection, {
               css: {
-                pointerEvents: "all"
+                pointerEvents: 'all'
               }
             });
             this.isAnimating = false;

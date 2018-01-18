@@ -1,0 +1,31 @@
+.section {
+  height: 100%;
+}
+
+.section__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.section__more {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all;
+  transform: translateY(-10px);
+}
+
+.section__main__image {
+  display: block;
+  width: 250px;
+  margin-bottom: 30%;
+}
+
+.section__main__headline {
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+}
