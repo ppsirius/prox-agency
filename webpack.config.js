@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === 'production') {
   config = Object.assign({}, config, {
     production: true,
     distPath: config.distPath,
-    sourceMaps: 'source-map'
+    sourceMaps: 'hidden-source-map'
   });
 };
 

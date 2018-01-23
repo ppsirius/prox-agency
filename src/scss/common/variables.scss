@@ -5,6 +5,7 @@ $light-blue: #0095da;
 
 $font-family: 'Lato', sans-serif;
 $line-height: '1.2';
+$browser-font-size: 16;
 
 $font-light: 300;
 $font-bold: 700;
@@ -19,6 +20,12 @@ $z-index-slide-navigation: 500;
 $z-index-more-section: 400;
 $z-index-main-section: 300;
 
-
 // gutter
 $gutter-30: 30px;
+
+$mobile-min: 300px;
+$mobile-max: 767px;
+$tablet-min: 768px;
+$tablet-max: 1024px;
+$desktop-min: 1025px;
+$desktop-max: 1920px;
