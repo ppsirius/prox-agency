@@ -6,13 +6,13 @@
   pointer-events: none;
   transition: all;
   z-index: $z-index-more-section;
-  color: $bg-color;
+  color: $dark;
   text-align: center;
 
 
   .section__more__mobile__header {
     @include fluid-type($mobile-min, $mobile-max, 26px, 32px);
-    color: $light-blue;
+    color: $secondary;
     margin-bottom: $gutter-30;
   }
 
@@ -27,7 +27,7 @@
 }
 
 .section__more__mobile {
-  width: 70%;
+  width: 80%;
 
   @media (min-width: #{em(768)}) {
     display: none;
@@ -47,7 +47,7 @@
 .section__more__desktop__header {
   display: block;
   @include fluid-type($tablet-min, $desktop-max, 24px, 48px);
-  color: $light-blue;
+  color: $secondary;
   margin-bottom: $gutter-20;
 }
 

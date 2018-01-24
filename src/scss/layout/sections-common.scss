@@ -37,7 +37,7 @@
   @media (min-width: #{em(768)}) {
     flex: 1 1 50%;
     width: 100%;
-    margin: 0 auto 0 auto;
+    margin: 0;
   }
 
   @media (min-width: #{em(1025)}) {
@@ -50,12 +50,12 @@
 
   @media (min-width: #{em(768)}) {
     flex: 1 0 50%;
-    padding-left: 8vw;
+    padding-left: 5vw;
   }
 
   @media (min-width: #{em(1025)}) {
     flex: 1 1 65%;
-    max-width: calc(8vw + #{em(450)});
+    max-width: calc(5vw + #{em(450)});
   }
 }
 

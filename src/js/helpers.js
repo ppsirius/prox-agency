@@ -23,3 +23,8 @@ export const setSvgCirclePosition = (buttonElement, svgElement) => {
   circleBg.setAttribute('cx', positionX);
   circleBg.setAttribute('cy', positionY)
 };
+
+export const isMobile = () => {
+  let viewportSize = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  return viewportSize < 768 ? true : false;
+}

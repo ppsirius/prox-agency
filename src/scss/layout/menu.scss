@@ -2,8 +2,8 @@
   position: fixed;
   top: 16px;
   right: 16px;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 22px;
   cursor: pointer;
   z-index: $z-index-menu-button;
 }
@@ -12,7 +12,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  color: $bg-color;
   z-index: $z-index-menu;
   pointer-events: none;
 
@@ -35,7 +34,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  color: $bg-color;
+  color: $white;
 
   .menu__wrapper {
     display: flex;
@@ -54,14 +53,54 @@
   margin: 0;
   padding: 0;
 
+  @media (min-width: #{em(768)}) {
+    width: 70%;
+    height: auto;
+    flex-direction: row;
+  }
+
   .menu__list__element {
     text-align: center;
     list-style: none;
-    font-size: 27px;
+    @include fluid-type($mobile-min, $mobile-max, 24px, 28px);
     user-select: none;
     cursor: pointer;
     transform: translateY(-10px);
     opacity: 0;
+
+    @media (min-width: #{em(768)}) {
+      display: flex;
+      flex: 1 1 15%;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin-right: 4vw;
+      @include fluid-type($tablet-min, $tablet-max, 10px, 20px);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:hover {
+        .menu__list__element__icon {
+          transform: translateY(-8px);
+        }
+      }
+    }
+
+    .menu__list__element__icon {
+      display: none;
+      transition: transform .3s ease-in;
+
+      @media (min-width: #{em(768)}) {
+        display: block;
+        max-height: em(70);
+        margin-bottom: 3vw;
+      }
+
+      @media (min-width: #{em(1025)}) {
+        max-height: em(110);
+      }
+    }
   }
 }
 
