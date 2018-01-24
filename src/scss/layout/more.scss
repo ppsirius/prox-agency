@@ -11,14 +11,61 @@
 
 
   .section__more__mobile__header {
-    font-size: 26px;
+    @include fluid-type($mobile-min, $mobile-max, 26px, 32px);
     color: $light-blue;
     margin-bottom: $gutter-30;
   }
 
   .section__more__mobile__subheader {
     margin: 0 0 $gutter-30 0;
-    font-size: 18px;
+    @include fluid-type($mobile-min, $mobile-max, 18px, 24px);
+  }
+
+  .section__more__mobile__desc {
+    @include fluid-type($mobile-min, $mobile-max, 18px, 24px);
   }
 }
 
+.section__more__mobile {
+  width: 70%;
+
+  @media (min-width: #{em(768)}) {
+    display: none;
+  }
+}
+
+.section__more__desktop {
+  display: none;
+  width: 80%;
+
+  @media (min-width: #{em(768)}) {
+    display: block;
+    text-align: left;
+  }
+}
+
+.section__more__desktop__header {
+  display: block;
+  @include fluid-type($tablet-min, $desktop-max, 24px, 48px);
+  color: $light-blue;
+  margin-bottom: $gutter-20;
+}
+
+.section__more__column-container {
+  display: flex;
+  @include fluid-type($tablet-min, $desktop-max, 9px, 22px);
+  line-height: 1.4;
+
+  .section__more__column {
+    flex: 1 1 50%;
+    margin-right: $gutter-20;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media (min-width: #{em(1025)}) {
+      margin-right: $gutter-40;
+    }
+  }
+}
