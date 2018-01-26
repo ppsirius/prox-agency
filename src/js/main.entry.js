@@ -4,6 +4,7 @@ import FullPage from './fullPage';
 import Menu from './menu';
 import Contact from './contact';
 import More from './more';
+import Carousel from './carousel';
 import { TweenMax, Power2 } from 'gsap';
 
 
@@ -12,6 +13,7 @@ window.addEventListener('load', () => {
   Menu.init();
   Contact.init();
   More.init();
+  Carousel.init();
 
   TweenMax.to(document.querySelector('body'), .5, {
     backgroundColor: 'rgba(4, 38, 95, 1)' ,

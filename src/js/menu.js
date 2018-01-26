@@ -25,8 +25,8 @@ class Menu {
     menu.addEventListener('click', scrollTo.bind(this));
 
     function scrollTo(e) {
-      if (e.target !== e.currentTarget) {
-        $.fn.fullpage.silentMoveTo(e.target.dataset.id);
+      if (e.target.parentElement !== e.currentTarget) {
+        $.fn.fullpage.silentMoveTo(e.target.parentElement.dataset.id);
         this.tooggleMenu();
       }
     }

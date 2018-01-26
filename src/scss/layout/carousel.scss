@@ -1,0 +1,62 @@
+.section--realizations {
+
+}
+
+.section__more__container,
+.section__more__container__carousel__slide {
+  width: 100%;
+  position: relative;
+
+  @media (min-width: #{em(768)}) {
+    width: 90%;
+  }
+
+  @media (min-width: #{em(1025)}) {
+    width: 80%;
+  }
+}
+
+// Styling for 'awsome' slick
+.fp-controlArrow {
+  position: absolute;
+  background-image: url('../assets/arrow_carousel.svg');
+  background-position: left top;
+  background-repeat: no-repeat;
+  border: none;
+
+  &.fp-prev, &.fp-next {
+    height: 26px;
+    width: 16px ;
+    top: 50%;
+    border-width: 20px;
+    margin: 0;
+
+    @media (min-width: #{em(768)}) {
+      width: 26px;
+      height: 36px;
+    }
+
+    @media (min-width: #{em(1025)}) {
+      width: 30px;
+      height: 50px;
+    }
+  }
+
+  &.fp-prev {
+    left: -8%;
+
+    @media (min-width: #{em(768)}) {
+      left: -12%;
+    }
+  }
+
+  &.fp-next {
+    right: -8%;
+    transform: rotate(180deg);
+
+    @media (min-width: #{em(768)}) {
+      right: -12%;
+    }
+  }
+}
+
