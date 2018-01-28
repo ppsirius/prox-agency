@@ -7,7 +7,10 @@ class Carousel {
     $(".slide").slick({
 
     });
+  }
 
+  static recalculatePosition() {
+    $('.slide').slick('setPosition');
   }
 }
 

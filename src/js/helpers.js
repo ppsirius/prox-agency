@@ -28,3 +28,7 @@ export const isMobile = () => {
   let viewportSize = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   return viewportSize < 768 ? true : false;
 }
+
+export const refreshAfterResize = () => {
+  window.addEventListener('resize', () => window.location.reload() );
+}

@@ -2,6 +2,7 @@ import $ from 'jquery';
 import { TweenMax, Power2 } from 'gsap';
 import fullpage from 'fullpage.js';
 import { getCircleRadius, setSvgCirclePosition } from './helpers';
+import Carousel from './carousel';
 
 class More {
   constructor() {
@@ -83,6 +84,7 @@ class More {
                 pointerEvents: 'all'
               }
             });
+            Carousel.recalculatePosition();
             this.isAnimating = false;
           }
         });
@@ -90,7 +92,6 @@ class More {
           attr: { r: this.circleRadius },
           delay: 0.2
         });
-
       }
       this.isOpen = !this.isOpen;
     }
